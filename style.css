@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', serif;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background: transparent;
+}
+
+.logo{
+    font-weight: 700;
+    text-decoration: none;
+    color: #0d043b;
+    font-size: 1.5rem;
+}
+
+.navbar a{
+    color: #fff;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color: #00aeff;
+}
+
+.home{
+    min-height: 100vh;
+    background: linear-gradient(-90deg, #0d043b 65%, #fff 35%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.homeImage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 500px;
+    background: #0d043b;
+    border-radius: 50%;
+    border: 25px solid white;
+    outline: 25px solid #0d043b;
+}
+
+.homeImage img{
+    position: relative;
+    max-width: 300px;
+    border-radius: 50%;
+}
+
+.homeContent{
+    max-width: 500px;
+    color: #fff;
+    text-align: right;
+}
+
+.homeContent h1{
+    font-size: 3rem;
+    line-height: 1.2;
+}
+
+.homeContent h3{
+    font-size: 2.3rem;
+    color: transparent;
+    -webkit-text-stroke: 0.5px #fff;
+    background: linear-gradient(#00aeff, #00aeff);
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: -410px 0;
+    animation: animateText 5s linear infinite;
+}
+
+@keyframes animateText{
+    0%,
+    95%,
+    100%{
+        background-position: -410px 0;
+    }
+
+    65%,
+    85%{
+        background-position: 0 0;
+        text-shadow: 0 0 50px #00aeff;
+    }
+}
+
+.homeContent p{
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+
+.homeSci{
+    margin: 25px;
+}
+
+.homeSci a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #00aeff;
+    margin-left: 20px;
+    transition: 0.5s;
+}
+
+.homeSci a:hover{
+    color: #fff;
+    background: #00aeff;
+    border-color: #00aeff;
+    box-shadow: 0 0 10px #00aeff;
+}
+
+.btn{
+    padding: 0.5rem 1rem;
+    background: #00aeff;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0 0 10px #00aeff;
+    transition: 0.5s;
+}
+
+.btn:hover{
+    box-shadow: none;
+}
+
+@media (max-width: 1024px){
+    .logo{
+        font-size: 1.4rem;
+    }
+
+    .navbar a{
+        font-size: 1.1rem;
+    }
+
+    .home{
+        padding: 0 10%;
+    }
+
+    .homeImage {
+        width: 370px;
+        height: 370px;
+        border: 20px solid white;
+        outline: 20px solid #0d043b;    
+    }
+
+    .homeContent{
+        max-width: 300px;
+    }
+
+    .homeContent h1{
+        font-size: 2rem;
+    }
+
+    .homeContent h3{
+        font-size: 1.8rem;
+    }
+
+    .homeContent p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px){
+    .logo {
+        font-size: 1.2rem;
+    }
+    
+    .navbar a {
+        font-size: 0.9rem;
+    }
+
+    .home {
+        padding: 5%;
+    }
+}
+
+@media (max-width: 690px){
+    .logo{
+        color: #fff;
+    }
+
+    .header{
+        background: #0d043b;
+    }
+
+    .home{
+        flex-direction: column;
+        background: linear-gradient(-340deg, #0d043b 65%, #fff 35%);
+        padding: 0;
+        margin-top: 100px;
+    }
+
+    .homeImage{
+        margin-bottom: 20px;
+    }
+
+    .homeContent{
+        text-align: center;
+    }
+}
+
+@media (max-width: 570px){
+    .logo{
+        margin-bottom: 20px;
+    }
+
+    .header{
+        flex-direction: column;
+    }
+
+    .navbar{       
+        height: 50px;
+        border: 2px solid #000;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 5px;
+    }
+
+    .navbar a{
+        display: inline;
+        padding: 10px 20px;
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+
+    .navbar a:hover,
+    .navbar a.active{
+        background: #00aeff;
+        color: #fff;
+    }
+
+    .navbar a:first-child{
+        border-radius: 15px 0 0 15px;
+    }
+
+    .navbar a:last-child{
+        border-radius: 0 15px 15px 0;
+    }
+
+    .home{
+        margin-top: 190px;
+    }
+}
+
+@media (max-width: 440px){
+    .home{
+        background: linear-gradient(-340deg, #0d043b 75%, #fff 25%);
+    }
+
+    .homeImage{
+        width: 300px;
+        height: 300px;
+    }
+}
